@@ -11,13 +11,18 @@ Example:
   <template>
     <script src="../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="ibm-tabs.html">
+    <link rel="import" href="ibm-tab.html">
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>
 ```
 -->
 ```html
-<ibm-tabs></ibm-tabs>
+<ibm-tabs selected="0">
+  <ibm-tab>Item one</ibm-tab>
+  <ibm-tab>Item two</ibm-tab>
+  <ibm-tab>Item three</ibm-tab>
+</ibm-tabs>
 ```
 
 [travis-image]: https://travis-ci.org/IBMResearch/ibm-tabs.svg?branch=master

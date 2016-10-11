@@ -7,6 +7,9 @@ The complete set of contributors may be found at https://ibmresearch.github.io/C
 -->
 
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../iron-menu-behavior/iron-menubar-behavior.html">
+<link rel="import" href="ibm-tab.html">
 
 <!--
 Tabs are used to separate content into different panes.
@@ -18,7 +21,17 @@ Tabs are used to separate content into different panes.
   <template>
     <style>
       :host {
-        display: block;
+        @apply(--layout-horizontal);
+
+        overflow: auto;
+      }
+
+      ::content > * {
+        margin-left: 25px;
+      }
+
+      ::content > *:first-of-type {
+        margin-left: 0;
       }
     </style>
 
@@ -26,7 +39,29 @@ Tabs are used to separate content into different panes.
   </template>
   <script>
     Polymer({
-      is: 'ibm-tabs'
+      is: 'ibm-tabs',
+
+      behaviors: [
+        Polymer.IronMenubarBehavior
+      ],
+
+      hostAttributes: {
+        role: 'tablist'
+      },
+
+      properties: {
+        selectable: {
+          type: String,
+          value: 'ibm-tab'
+        }
+      },
+
+      // TODO: Waiting for PolymerElements/iron-menu-behavior/issues/81
+      _updateItems: function() {
+        var nodes = Polymer.dom(this).querySelectorAll(this.selectable || '*');
+        nodes = Array.prototype.filter.call(nodes, this._bindFilterItem);
+        this._setItems(nodes);
+      }
     });
   </script>
 </dom-module>

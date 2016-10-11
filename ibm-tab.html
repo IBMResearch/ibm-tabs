@@ -1,0 +1,93 @@
+<!--
+@license
+Copyright (c) 2016 The IBM Research Emergent Solutions authors. All rights reserved.
+This code may only be used under the MIT style license found at https://ibmresearch.github.io/LICENSE.txt
+The complete set of authors may be found at https://ibmresearch.github.io/AUTHORS.txt
+The complete set of contributors may be found at https://ibmresearch.github.io/CONTRIBUTORS.txt
+-->
+
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-behaviors/iron-button-state.html">
+<link rel="import" href="../iron-behaviors/iron-control-state.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+
+<!--
+`<ibm-tab>` is the tab for the `<ibm-tabs>`.
+
+@demo demo/index.html
+-->
+
+<dom-module id="ibm-tab">
+  <template>
+    <style>
+      :host {
+        @apply(--layout-inline);
+        @apply(--layout-center);
+
+        position: relative;
+
+        overflow: hidden;
+
+        height: 50px;
+
+        cursor: pointer;
+        white-space: nowrap;
+
+        font-family: "Helvetica Neue", Arial, sans-serif;
+      }
+
+      :host(:focus) {
+        color: var(--ibm-tabs-selected-color, #3b6caa);
+        outline: none;
+      }
+
+      :host(:hover),
+      :host(.iron-selected) {
+        color: var(--ibm-tabs-selected-color, #3b6caa);
+      }
+
+      :host::after {
+        position: absolute;
+        bottom: 0;
+
+        display: block;
+
+        width: 100%;
+        height: 4px;
+
+        content: '';
+        transition: -webkit-transform .4s cubic-bezier(0.4, 1, 0.4, 1);
+        transition: transform .4s cubic-bezier(0.4, 1, 0.4, 1);
+        -webkit-transform: translate3d(0, 4px, 0);
+        transform: translate3d(0, 4px, 0);
+
+        background: var(--ibm-tabs-selected-color, #3b6caa);
+      }
+
+      :host(:focus)::after {
+        transform: translate3d(0, 0, 0);
+      }
+
+      :host(:hover)::after,
+      :host(.iron-selected)::after {
+        transform: translate3d(0, 0, 0);
+      }
+    </style>
+
+    <content></content>
+  </template>
+  <script>
+    Polymer({
+      is: 'ibm-tab',
+
+      behaviors: [
+        Polymer.IronControlState,
+        Polymer.IronButtonState
+      ],
+
+      hostAttributes: {
+        role: 'tab'
+      }
+    });
+  </script>
+</dom-module>
