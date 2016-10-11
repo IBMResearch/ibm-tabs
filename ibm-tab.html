@@ -14,7 +14,11 @@ The complete set of contributors may be found at https://ibmresearch.github.io/C
 <!--
 `<ibm-tab>` is the tab for the `<ibm-tabs>`.
 
-@demo demo/index.html
+### Styling
+
+Custom property            | Description                           | Default
+---------------------------|---------------------------------------|------------
+`--ibm-tab-focused-color`  | Focused tab text and underline color  | `#3b6caa`
 -->
 
 <dom-module id="ibm-tab">
@@ -37,13 +41,13 @@ The complete set of contributors may be found at https://ibmresearch.github.io/C
       }
 
       :host(:focus) {
-        color: var(--ibm-tabs-selected-color, #3b6caa);
+        color: var(--ibm-tab-focused-color, #3b6caa);
         outline: none;
       }
 
       :host(:hover),
       :host(.iron-selected) {
-        color: var(--ibm-tabs-selected-color, #3b6caa);
+        color: var(--ibm-tab-focused-color, #3b6caa);
       }
 
       :host::after {
@@ -61,7 +65,7 @@ The complete set of contributors may be found at https://ibmresearch.github.io/C
         -webkit-transform: translate3d(0, 4px, 0);
         transform: translate3d(0, 4px, 0);
 
-        background: var(--ibm-tabs-selected-color, #3b6caa);
+        background: var(--ibm-tab-focused-color, #3b6caa);
       }
 
       :host(:focus)::after {
