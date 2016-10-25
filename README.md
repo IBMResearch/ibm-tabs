@@ -1,4 +1,5 @@
 [![Build status][travis-image]][travis-url]
+[![Published on webcomponents.org][webcomponents-image]][webcomponents-url]
 
 ## \<ibm-tabs\>
 
@@ -27,3 +28,5 @@ Example:
 
 [travis-image]: https://travis-ci.org/IBMResearch/ibm-tabs.svg?branch=master
 [travis-url]: https://travis-ci.org/IBMResearch/ibm-tabs
+[webcomponents-image]: https://img.shields.io/badge/webcomponents.org-published-blue.svg
+[webcomponents-url]: https://beta.webcomponents.org/element/IBMResearch/ibm-tabs
