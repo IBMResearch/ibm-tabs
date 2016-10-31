@@ -16,9 +16,9 @@ The complete set of contributors may be found at https://ibmresearch.github.io/C
 
 ### Styling
 
-Custom property            | Description                           | Default
----------------------------|---------------------------------------|------------
-`--ibm-tab-focused-color`  | Focused tab text and underline color  | `#3b6caa`
+Custom property            | Description                            | Default
+---------------------------|----------------------------------------|------------
+`--ibm-tab-color-focused`  | Tab text and underline color on focus  | `#3b6caa`
 -->
 
 <dom-module id="ibm-tab">
@@ -44,13 +44,13 @@ Custom property            | Description                           | Default
       }
 
       :host(:focus) {
-        color: var(--ibm-tab-focused-color, #3b6caa);
+        color: var(--ibm-tab-color-focused, #3b6caa);
         outline: none;
       }
 
       :host(:hover),
       :host(.iron-selected) {
-        color: var(--ibm-tab-focused-color, #3b6caa);
+        color: var(--ibm-tab-color-focused, #3b6caa);
       }
 
       :host::after {
@@ -68,7 +68,7 @@ Custom property            | Description                           | Default
         -webkit-transform: translate3d(0, 4px, 0);
         transform: translate3d(0, 4px, 0);
 
-        background: var(--ibm-tab-focused-color, #3b6caa);
+        background: var(--ibm-tab-color-focused, #3b6caa);
       }
 
       :host(:focus)::after {
