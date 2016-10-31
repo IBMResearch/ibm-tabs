@@ -32,26 +32,26 @@ The complete set of contributors may be found at https://ibmresearch.github.io/C
       <demo-snippet>
         <template>
           <ibm-tabs selected="0">
-            <ibm-tab>Item one</ibm-tab>
-            <ibm-tab>Item two</ibm-tab>
-            <ibm-tab>Item three</ibm-tab>
+            <ibm-tab>Tab one</ibm-tab>
+            <ibm-tab>Tab two</ibm-tab>
+            <ibm-tab>Tab three</ibm-tab>
           </ibm-tabs>
         </template>
       </demo-snippet>
 
-      <h3>Tabs can contain links.</h3>
-      <p class="note"><code>ibm-tabs</code> implements its own tabindexing and keyboard focus patterns so an anchor placed inside should set <code>tabindex="-1"</code>.</p>
+      <h3>Tabs can contain links</h3>
+      <p class="note">Wrap `ibm-tab`s in an anchor tags with <code>tabindex="-1"</code>.</p>
       <demo-snippet>
         <template>
           <ibm-tabs selected="0">
             <a href="#/one" tabindex="-1">
-              <ibm-tab>Item one</ibm-tab>
+              <ibm-tab>Tab one</ibm-tab>
             </a>
             <a href="#/two" tabindex="-1">
-              <ibm-tab>Item two</ibm-tab>
+              <ibm-tab>Tab two</ibm-tab>
             </a>
             <a href="#/three" tabindex="-1">
-              <ibm-tab>Item three</ibm-tab>
+              <ibm-tab>Tab three</ibm-tab>
             </a>
           </ibm-tabs>
         </template>

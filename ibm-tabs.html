@@ -14,6 +14,51 @@ The complete set of contributors may be found at https://ibmresearch.github.io/C
 <!--
 Tabs are used to separate content into different panes.
 
+Use `selected` property to get or set the selected tab.
+
+Example:
+
+```html
+<ibm-tabs selected="0">
+  <ibm-tab>Tab 1</ibm-tab>
+  <ibm-tab>Tab 2</ibm-tab>
+  <ibm-tab>Tab 3</ibm-tab>
+</ibm-tabs>
+```
+
+A common usage for `ibm-tabs` is to use it along with `iron-pages` to switch
+between different views.
+
+```html
+<ibm-tabs selected="{{selected}}">
+  <ibm-tab>Tab 1</ibm-tab>
+  <ibm-tab>Tab 2</ibm-tab>
+  <ibm-tab>Tab 3</ibm-tab>
+</ibm-tabs>
+<iron-pages selected="{{selected}}">
+  <div>Page 1</div>
+  <div>Page 2</div>
+  <div>Page 3</div>
+</iron-pages>
+```
+
+To use link in `ibm-tabs`, wrap `ibm-tab`s in an anchor tags with
+`tabindex="-1"`.
+
+```html
+<ibm-tabs selected="0">
+<a href="#/one" tabindex="-1">
+  <ibm-tab>Tab one</ibm-tab>
+</a>
+<a href="#/two" tabindex="-1">
+  <ibm-tab>Tab two</ibm-tab>
+</a>
+<a href="#/three" tabindex="-1">
+  <ibm-tab>Tab three</ibm-tab>
+</a>
+</ibm-tabs>
+```
+
 @demo demo/index.html
 -->
 
