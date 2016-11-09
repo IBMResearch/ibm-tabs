@@ -53,7 +53,7 @@ Custom property            | Description                            | Default
         color: var(--ibm-tab-color-focused, #3b6caa);
       }
 
-      :host::after {
+      :host::before {
         position: absolute;
         bottom: 0;
 
@@ -71,12 +71,12 @@ Custom property            | Description                            | Default
         background: var(--ibm-tab-color-focused, #3b6caa);
       }
 
-      :host(:focus)::after {
+      :host(:focus)::before {
         transform: translate3d(0, 0, 0);
       }
 
-      :host(:hover)::after,
-      :host(.iron-selected)::after {
+      :host(:hover)::before,
+      :host(.iron-selected)::before {
         transform: translate3d(0, 0, 0);
       }
     </style>
