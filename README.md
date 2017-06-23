@@ -1,5 +1,5 @@
-[![Build status][travis-image]][travis-url]
-[![Published on webcomponents.org][webcomponents-image]][webcomponents-url]
+[![Build status](https://travis-ci.org/IBMResearch/ibm-tabs.svg?branch=master)](https://travis-ci.org/IBMResearch/ibm-tabs)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/IBMResearch/ibm-tabs)
 
 ## \<ibm-tabs\>
 
@@ -26,7 +26,8 @@ Example:
 </ibm-tabs>
 ```
 
-[travis-image]: https://travis-ci.org/IBMResearch/ibm-tabs.svg?branch=master
-[travis-url]: https://travis-ci.org/IBMResearch/ibm-tabs
-[webcomponents-image]: https://img.shields.io/badge/webcomponents.org-published-blue.svg
-[webcomponents-url]: https://beta.webcomponents.org/element/IBMResearch/ibm-tabs
+### Notable breaking changes between 1.x and 2.x (hybrid):
+
+IronSelectableBehavior and IronMultiSelectableBehavior, which are used by
+ibm-tabs, introduce multiple breaking changes. Please see the README for those
+behaviors for more detail.

@@ -71,15 +71,15 @@ To use link in `ibm-tabs`, wrap `ibm-tab`s in an anchor tags with
         overflow: auto;
       }
 
-      ::content > * {
+      :host ::slotted(*) {
         margin-left: 25px;
       }
 
-      ::content > *:first-of-type {
+      :host ::slotted(*:first-of-type) {
         margin-left: 0;
       }
 
-      ::content > a {
+      :host ::slotted(a) {
         @apply --layout-inline;
 
         text-decoration: none;
@@ -88,7 +88,7 @@ To use link in `ibm-tabs`, wrap `ibm-tab`s in an anchor tags with
       }
     </style>
 
-    <content></content>
+    <slot></slot>
   </template>
   <script>
     Polymer({
